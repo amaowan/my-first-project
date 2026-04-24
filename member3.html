@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成员三：年龄分布与性别结构</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-member3">
+    <div class="particle-background">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="member3-shell">
+        <header class="member3-head fade-in">
+            <a href="index.html" class="back-btn member3-back">返回首页</a>
+            <div class="member3-stamp">MEMBER 03</div>
+            <h1>年龄分布与性别结构</h1>
+            <p>这一页从单条奖牌记录和项目汇总两个角度切入，重点观察运动员年龄分布以及不同项目的男女结构差异。</p>
+        </header>
+
+        <main class="member3-collage">
+            <section class="prep-board prep-board-compact fade-in">
+                <div class="prep-board-head">
+                    <h3>前期数据预处理截图</h3>
+                </div>
+                <div class="prep-slots two">
+                    <div class="prep-slot prep-slot-square">
+                        <img src="assets/全部奖牌_年龄明细.png" alt="全部奖牌年龄明细表截图">
+                        <small>全部奖牌年龄明细表</small>
+                    </div>
+                    <div class="prep-slot prep-slot-tall">
+                        <img src="assets/项目性别汇总.png" alt="项目性别汇总表截图">
+                        <small>夏奥会与冬奥会项目性别汇总表</small>
+                    </div>
+                </div>
+            </section>
+
+            <section class="member3-note fade-in">
+                <h2>观察重点</h2>
+                <p>本页保留了交互筛选，因为年龄分布和性别结构更适合边看边比较。图 5 可以切换金牌、银牌、铜牌，图 6 可以切换夏奥会和冬奥会。</p>
+            </section>
+
+            <section class="member3-stats fade-in">
+                <div class="member3-stat">
+                    <span>点位数</span>
+                    <strong>1216</strong>
+                </div>
+                <div class="member3-stat">
+                    <span>项目组合</span>
+                    <strong>41</strong>
+                </div>
+                <div class="member3-stat">
+                    <span>平均年龄</span>
+                    <strong>23.6 / 24.08</strong>
+                </div>
+            </section>
+
+            <section class="member3-card member3-large fade-in">
+                <div class="chart-meta">
+                    <h2>图 5 奖牌获得者年龄蜂群图</h2>
+                    <p>每个点对应一条奖牌记录，横轴为年龄，纵向分为夏奥会与冬奥会两个赛季带。</p>
+                </div>
+                <div class="chart-controls" id="medal-filter-controls">
+                    <button class="chart-filter active" data-medal="all">全部奖牌</button>
+                    <button class="chart-filter" data-medal="金">金牌</button>
+                    <button class="chart-filter" data-medal="银">银牌</button>
+                    <button class="chart-filter" data-medal="铜">铜牌</button>
+                </div>
+                <div id="age-distribution-chart" class="chart-container d3-chart"></div>
+                <div class="chart-insight">
+                    <h4>图表结论</h4>
+                    <p>奖牌记录的年龄主要集中在 20 至 27 岁之间，说明这一年龄段是较高频的夺牌区间。冬奥会的年龄分布相对更平缓，部分项目在 28 岁以上仍保持较多记录；切换金银铜后，也能看到不同奖牌类型在年龄带上的细微差异。</p>
+                </div>
+            </section>
+
+            <section class="member3-note alt fade-in">
+                <h2>阅读方式</h2>
+                <p>图 5 更适合看点位密集区和年龄带分布，图 6 更适合看项目之间的男女结构差异。两张图都保留了筛选按钮，便于按不同口径比较。</p>
+            </section>
+
+            <section class="member3-card member3-medium fade-in">
+                <div class="chart-meta">
+                    <h2>图 6 各项目男女奖牌结构气泡图</h2>
+                    <p>横轴为女性奖牌数，纵轴为男性奖牌数，气泡越大表示该项目奖牌记录总量越多，颜色区分夏奥会和冬奥会。</p>
+                </div>
+                <div class="chart-controls" id="season-filter-controls">
+                    <button class="chart-filter active" data-season="all">全部赛季</button>
+                    <button class="chart-filter" data-season="夏奥会">夏奥会</button>
+                    <button class="chart-filter" data-season="冬奥会">冬奥会</button>
+                </div>
+                <div id="gender-structure-chart" class="chart-container d3-chart"></div>
+                <div class="chart-insight">
+                    <h4>图表结论</h4>
+                    <p>夏奥会的项目数量更多，气泡分布更分散，说明不同项目在男女结构上差异很大；冬奥会则集中在少数项目上，最明显的是短道速滑。图中部分项目只落在某一侧，和原始数据中团体项目、项目设置及记录口径有关，因此这里更适合解释“结构特征”，不适合直接当作严格的人数结论。</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+    <script src="js/olympic-data.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/member3.js"></script>
+</body>
+</html>

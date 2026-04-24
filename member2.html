@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成员二：历届趋势与综合对比</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-member2">
+    <div class="particle-background">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="member2-shell">
+        <header class="member2-topbar fade-in">
+            <div>
+                <a href="index.html" class="back-btn member2-back">返回首页</a>
+            </div>
+            <div class="member2-title">
+                <h1>成员二：历届趋势与综合对比</h1>
+                <p>这一页主要从时间和指标两个角度整理数据，先看历届变化，再比较夏奥会与冬奥会在规模、覆盖面和结构上的差异。</p>
+            </div>
+        </header>
+
+        <section class="member2-kpis fade-in">
+            <article class="member2-kpi">
+                <span>届次覆盖</span>
+                <strong>10 + 10</strong>
+                <em>夏奥会 / 冬奥会</em>
+            </article>
+            <article class="member2-kpi">
+                <span>记录总量</span>
+                <strong>1007 : 209</strong>
+                <em>夏奥会 / 冬奥会</em>
+            </article>
+            <article class="member2-kpi">
+                <span>女性占比</span>
+                <strong>66.4% : 57.9%</strong>
+                <em>夏奥会 / 冬奥会</em>
+            </article>
+            <article class="member2-kpi">
+                <span>金牌占比</span>
+                <strong>36.2% : 17.7%</strong>
+                <em>夏奥会 / 冬奥会</em>
+            </article>
+        </section>
+
+        <section class="prep-board fade-in member2-prep">
+            <div class="prep-board-head">
+                <h3>前期数据预处理截图</h3>
+            </div>
+            <div class="prep-slots two">
+                <div class="prep-slot prep-slot-square">
+                    <img src="assets/夏奥会原始表.png" alt="夏奥会原始表截图">
+                    <small>夏奥会原始数据表</small>
+                </div>
+                <div class="prep-slot prep-slot-square">
+                    <img src="assets/冬奥会原始表.png" alt="冬奥会原始表截图">
+                    <small>冬奥会原始数据表</small>
+                </div>
+            </div>
+        </section>
+
+        <main class="member2-board">
+            <section class="member2-wide fade-in">
+                <div class="member2-block-head">
+                    <div>
+                        <p class="member2-chip">图 3</p>
+                        <h2>夏奥会与冬奥会历届总奖牌趋势</h2>
+                    </div>
+                    <p>统一使用年份作为横轴，连接各届比赛的总奖牌记录数，便于比较两类赛事的长期变化。</p>
+                </div>
+                <div id="summer-trend-chart" class="chart-container"></div>
+                <div class="chart-insight">
+                    <h4>图表结论</h4>
+                    <p>夏奥会在各届中的奖牌记录规模始终明显高于冬奥会，而且在 2008 年之后整体处于较高水平。冬奥会的总量虽然较小，但后期波动更明显，说明其奖牌增长更依赖少数届次和重点项目的集中突破。</p>
+                </div>
+            </section>
+
+            <section class="member2-lower">
+                <article class="member2-side fade-in">
+                    <h3>本页说明</h3>
+                    <p>这一页把原始记录先汇总到届次和指标两个层面，再分别放入折线图和雷达图中。这样既能看出历时变化，也能看出两类赛事在结构上的差异。</p>
+                    <ul class="member2-list">
+                        <li>图 3 关注时间趋势</li>
+                        <li>图 4 关注结构差异</li>
+                        <li>顶部数字先给出整体口径</li>
+                    </ul>
+                </article>
+
+                <article class="member2-chart fade-in">
+                    <div class="member2-block-head">
+                        <div>
+                            <p class="member2-chip">图 4</p>
+                            <h2>夏奥会与冬奥会多指标雷达图</h2>
+                        </div>
+                        <p>将奖牌总量、项目覆盖、省份覆盖、女性占比、团体占比和金牌占比放到同一图中比较。</p>
+                    </div>
+                    <div id="season-compare-chart" class="chart-container"></div>
+                    <div class="chart-insight">
+                        <h4>图表结论</h4>
+                        <p>夏奥会在奖牌总量、项目覆盖和省份覆盖上都明显大于冬奥会，说明其整体规模和参与面更广。与此同时，夏奥会的女性占比和金牌占比也更高，反映出其数据结构比冬奥会更丰富，优势来源更分散。</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/echarts.js"></script>
+    <script src="js/olympic-data.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/member2.js"></script>
+</body>
+</html>

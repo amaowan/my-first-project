@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奥运奖牌数据可视化分析</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="particle-background">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <header class="hero">
+            <h1>夏奥会与冬奥会奖牌数据分析</h1>
+            <p class="subtitle subtitle-single-line">基于公开奖牌明细整理夏奥会和冬奥会数据，重点观察夏奥会的项目结构、时间趋势、人群特征与区域分布。</p>
+            <div class="hero-decoration"></div>
+        </header>
+
+        <section class="project-intro fade-in">
+            <h2>项目概述</h2>
+            <div class="intro-grid">
+                <article class="intro-card">
+                    <h3>研究背景</h3>
+                    <p>奥运奖牌数据不仅可以显示竞技成绩，还能体现不同项目的发展重点、优势区域和参赛人群特征。把夏奥会与冬奥会放在同一套口径下比较，便于看出两类赛事在规模、覆盖面和结构上的区别。</p>
+                </article>
+                <article class="intro-card">
+                    <h3>数据来源</h3>
+                    <p>本研究数据主要爬取自CCTV央视网,内容包含具体奥运会届次、获奖日期、比赛项目、奖牌类型及获奖运动员信息。结合官方公布的运动员个人资料,通过AI辅助计算,整理得到运动员获奖时的年龄、参赛注册省份（省份以其代表参赛的注册单位为准，通常为出生地或长期训练所在地）。</p>
+                    
+                </article>
+                <article class="intro-card">
+                    <h3>研究意义</h3>
+                    <p>奥运奖牌数据可以能反映成绩高低，也能彰显不同项目的发展重心、优势来源和人员结构。将夏奥会与冬奥会放在同一套数据口径下观察，可以更直观地看出哪些项目更稳定、哪些年份变化更明显，以及不同项目在年龄、性别和区域分布上的差别。</p>
+                </article>
+                <article class="intro-card">
+                    <h3>数据规模</h3>
+                    <p>我们爬取了从1988年至2026年的夏奥会和冬奥会各10届我国奖牌及得主的相关信息,涵共整理出 1216 条奖牌记录，其中夏奥会 1007 条、冬奥会 209 条；夏奥会覆盖 36 个项目，冬奥会覆盖 5 个项目。</p>
+                </article>
+            </div>
+
+            <div class="project-points">
+                <article class="project-point">
+                    <h3>主要结论</h3>
+                    <p>从总量看，夏奥会奖牌记录远高于冬奥会；从项目结构看，夏奥会的优势项目分布更广，而冬奥会的奖牌更集中在少数项目；从人群特征看，奖牌记录主要集中在 20 至 27 岁之间，不同项目在男女结构上也存在明显差异。</p>
+                </article>
+                <article class="project-point">
+                    <h3>局限性说明</h3>
+                    <p>目前数据中包含团体项目，部分奖牌会因团队成员逐条记录而出现重复计数，因此页面展示的是“奖牌记录规模”而不是严格去重后的“奖牌块数”。此外，原始网页字段格式并不完全统一，年龄和项目名称经过整理后仍可能存在少量口径差异。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="members-grid">
+            <article class="member-card fade-in">
+                <div class="member-avatar"><span>01</span></div>
+                <h3>成员一</h3>
+                <p class="member-role">项目分布与区域贡献</p>
+                <p class="member-desc">本页围绕项目和省份两个层面展开，重点呈现夏奥会奖牌记录较为集中的项目类型，以及奖牌记录在不同地区之间的分布情况。</p>
+                <a href="member1.html" class="btn-primary">查看页面</a>
+            </article>
+
+            <article class="member-card fade-in">
+                <div class="member-avatar"><span>02</span></div>
+                <h3>成员二</h3>
+                <p class="member-role">历届趋势与综合对比</p>
+                <p class="member-desc">本页将历届赛事置于统一时间轴下进行整理，并结合多项指标进行比较，用于呈现夏奥会与冬奥会在总体规模和发展变化上的特征。</p>
+                <a href="member2.html" class="btn-primary">查看页面</a>
+            </article>
+
+            <article class="member-card fade-in">
+                <div class="member-avatar"><span>03</span></div>
+                <h3>成员三</h3>
+                <p class="member-role">年龄分布与性别结构</p>
+                <p class="member-desc">本页主要关注运动员层面的信息，通过年龄点位分布和项目气泡图，呈现奖牌记录的年龄特征以及不同项目的性别结构。</p>
+                <a href="member3.html" class="btn-primary">查看页面</a>
+            </article>
+        </section>
+    </div>
+
+    <script src="js/animations.js"></script>
+</body>
+</html>

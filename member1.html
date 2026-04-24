@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成员一：项目分布与区域贡献</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-member1">
+    <div class="particle-background">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="member1-shell">
+        <aside class="member1-sidebar fade-in">
+            <a href="index.html" class="back-btn member1-back">返回首页</a>
+            <p class="member1-tag">MEMBER 01</p>
+            <h1>成员一</h1>
+            <p class="member1-lead">这一部分主要整理项目届次透视表和省份汇总表，用于观察夏奥会的优势项目，以及夏奥会和冬奥会的区域分布差异。</p>
+            <nav class="member1-nav">
+                <a href="#m1-overview">页面说明</a>
+                <a href="#m1-prep">预处理记录</a>
+                <a href="#m1-chart1">图 1</a>
+                <a href="#m1-chart2">图 2</a>
+                <a href="#m1-summary">结论</a>
+            </nav>
+            <div class="member1-note">
+                <span>本页重点</span>
+                <strong>项目透视</strong>
+                <strong>区域分布</strong>
+                <strong>全量覆盖</strong>
+            </div>
+        </aside>
+
+        <main class="member1-main">
+            <section id="m1-overview" class="member1-intro fade-in">
+                <h2>项目分布与区域贡献</h2>
+                <p>本页主要使用两类中间结果。一类是“项目 × 届次”的透视结果，用来查看哪些项目在不同年份持续产出奖牌；另一类是按赛季和省份汇总后的结果，用来比较夏奥会与冬奥会的区域集中程度。</p>
+            </section>
+
+            <section id="m1-prep" class="prep-board fade-in">
+                <div class="prep-board-head">
+                    <h3>前期数据预处理截图</h3>
+                </div>
+                <div class="prep-slots two">
+                    <div class="prep-slot prep-slot-wide">
+                        <img src="assets/夏奥会_项目届次透视.png" alt="夏奥会项目届次透视表截图">
+                        <small>夏奥会项目届次透视表</small>
+                    </div>
+                    <div class="prep-slot prep-slot-tall">
+                        <img src="assets/省份汇总.png" alt="省份汇总表截图">
+                        <small>夏奥会与冬奥会省份汇总表</small>
+                    </div>
+                </div>
+            </section>
+
+            <section id="m1-chart1" class="member1-panel fade-in">
+                <div class="member1-panel-head">
+                    <div>
+                        <p class="member1-panel-tag">图 1</p>
+                        <h3>夏奥会项目届次 3D 柱图</h3>
+                    </div>
+                    <p>横轴为年份，纵轴为项目，柱体高度表示该项目在对应届次中的奖牌记录数。</p>
+                </div>
+                <div id="summer-project-chart" class="chart-container"></div>
+                <div class="chart-insight">
+                    <h4>图表结论</h4>
+                    <p>夏奥会奖牌记录并不是均匀分布在所有项目上，而是明显集中在乒乓球、羽毛球、跳水、体操、举重等优势项目。2008 年、2021 年和 2024 年整体高度更高，说明这些年份的项目覆盖和奖牌记录规模都更突出。</p>
+                </div>
+            </section>
+
+            <section id="m1-chart2" class="member1-panel fade-in">
+                <div class="member1-panel-head">
+                    <div>
+                        <p class="member1-panel-tag">图 2</p>
+                        <h3>夏奥会与冬奥会省份矩形树图</h3>
+                    </div>
+                    <p>橙色表示夏奥会，冰雪蓝表示冬奥会，面积表示对应省份的奖牌记录总量。</p>
+                </div>
+                <div id="summer-province-chart" class="chart-container"></div>
+                <div class="chart-insight">
+                    <h4>图表结论</h4>
+                    <p>夏奥会的奖牌记录分布在更多省份上，区域覆盖面更广；冬奥会则集中在更少的省份中，结构更集中。辽宁、江苏、山东、广东、北京等省份在夏奥会中贡献较大，而冬奥会的重点来源地区数量明显更少。</p>
+                </div>
+            </section>
+
+            <section id="m1-summary" class="member1-summary fade-in">
+                <div class="summary-item">
+                    <span class="summary-number">1216</span>
+                    <span class="summary-label">总记录数</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-number">36</span>
+                    <span class="summary-label">夏奥会项目</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-number">29</span>
+                    <span class="summary-label">夏奥会省份</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/echarts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+    <script src="js/olympic-data.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/member1.js"></script>
+</body>
+</html>
